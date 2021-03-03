@@ -9,4 +9,4 @@ species <- "Harpia harpyja"
 
 occ_splink <-  rspeciesLink(species = species, save = FALSE)
 
-write.csv(occ_splink, "data/raw/harpia/00_Harpia_harpyja.csv")
+write.csv(occ_splink, "data/raw/harpia/00_Harpia_harpyja.csv", row.names = FALSE)

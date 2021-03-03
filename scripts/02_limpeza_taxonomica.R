@@ -16,7 +16,8 @@ spp <- data$scientificName
 spp_check <- lapply(spp, name_backbone)
 
 # Juntando os elementos da lista em um data frame
-spp_df <- bind_rows(spp_check)
+spp_df <- bind_rows(spp_check) %>%
+  mutate(search_spp = spp)
 
 head(spp_df)
 
@@ -26,7 +27,12 @@ table(spp_df$status)
 # 2. Selecionando apenas especies com problemas --------------------------------
 
 spp_problems <- spp_df %>%
-  filter(status %in% c("DOUBTFUL", "SYNONYM"))
+  filter(status %in% c("SYNONYM", "DOUBTFUL")) %>%
+  select(search_spp, canonicalName, rank, status) %>%
+  as.data.frame()
+
+
+spp_df %>% filter(search_spp == "Rivulus corpulentus") %>% as.data.frame()
 
 dim(spp_problems)
 
