@@ -31,9 +31,8 @@ spp_problems <- spp_df %>%
   select(search_spp, canonicalName, rank, status) %>%
   as.data.frame()
 
-
-spp_df %>% filter(search_spp == "Rivulus corpulentus") %>% as.data.frame()
-
 dim(spp_problems)
 
 View(spp_problems)
+
+# 3. Adicionando coluna com status dos nomes -----------------------------------

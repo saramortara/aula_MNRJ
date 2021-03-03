@@ -18,3 +18,7 @@ occ_clean <- clean_coordinates(occ,
 
 
 occ_clean %>% filter(.summary)
+
+# 4. Exportando os dados -------------------------------------------------------
+
+
