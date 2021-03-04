@@ -1,4 +1,4 @@
-# Bases de dados de biodiversidade
+# Bases de dados de biodiodiversidade: conceitos e usos
 
 Aula sobre bases de dados de biodiversidade no contexto de coleções biológicas. 
 
@@ -13,6 +13,5 @@ Estrutura de pastas do repositório:
     ├── aula_MNRJ.Rproj       # projeto de RStudio
     ├── data                  # dados brutos e processados
     ├── figs                  # figuras geradas pelos scripts
-    ├── outputs               # outputs gerados pelos scripts
     ├── README.md
     └── scripts               # scripts de R
