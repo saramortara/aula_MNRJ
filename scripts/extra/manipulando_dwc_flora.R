@@ -59,7 +59,7 @@ dim(ziziphus_distr)
 
 length(unique(ziziphus_distr$id))
 
-View(ziziphus_distr)
+#View(ziziphus_distr)
 
 # Especies de Ziziphus da Caatinga
 ziziphus_caa <- ziziphus_distr[grep("Caatinga", ziziphus_distr$occurrenceRemarks), ]
@@ -68,4 +68,4 @@ unique(ziziphus_caa$scientificName)
 ziziphus_spp <- ziziphus_caa %>%
   distinct(scientificName, occurrenceRemarks)
 
-write.csv(ziziphus_spp, "data/processed/02_Ziziphus_Caatinga.csv", row.names = FALSE)
+write.csv(ziziphus_spp, "data/processed/Ziziphus_Caatinga.csv", row.names = FALSE)

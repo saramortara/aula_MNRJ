@@ -20,6 +20,8 @@ names(dwc)
 # 1.2. Informações básicas: ----
 ## Caminho onde estão os arquivos
 file_path <- dirname(dwc$files$data_paths[1])
+## Metadados
+dwc$highmeta
 ## Data de atualização da base de dados
 last_update <- dwc$emlmeta$additionalMetadata$metadata$gbif$dateStamp
 ## Citação
@@ -132,5 +134,5 @@ dim(taxon_end)
 
 # 4. Exportando tabelas modificadas para proximos passos
 if (!dir.exists("data/processed"))  {dir.create("data/processed", recursive = TRUE)}
-write.csv(taxon_end, "data/processed/01-endemic_fishes.csv")
+write.csv(taxon_end, "data/processed/01-endemic_fishes.csv", row.names = FALSE)
 
