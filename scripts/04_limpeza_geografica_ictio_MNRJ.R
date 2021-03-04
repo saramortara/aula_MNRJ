@@ -19,7 +19,7 @@ occs <- dados %>%
   mutate(occ_id = paste0("occ_", sprintf("%03d", 1:nrow(.)))) %>%
   relocate(occ_id)
 
-# 2. Fazendo a checagem com coordinate cleaner ------------------------------------
+# 2. Fazendo a checagem com CoordinateCleaner ----------------------------------
 occs_check <- clean_coordinates(occs,
                                 species = "Scientific.Name",
                                 lon = "Longitude",
